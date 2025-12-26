@@ -1,0 +1,10 @@
+# Source files (not for deployment)
+*.pdf
+range-brand-guide-v3.jsx
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/
