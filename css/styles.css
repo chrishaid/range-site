@@ -648,6 +648,28 @@ section {
   gap: 0.5rem;
 }
 
+.founder-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: var(--space-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--pine);
+}
+
+.founder-card__link svg {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.founder-card__link:hover {
+  color: var(--forest);
+}
+
+.founder-card__link:hover svg {
+  transform: translateX(3px);
+}
+
 .founder-card__tag {
   font-size: 0.75rem;
   font-weight: 500;
@@ -753,6 +775,11 @@ section {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   color: var(--stone);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer__domain:hover {
+  color: var(--mist);
 }
 
 .footer__domain span {
