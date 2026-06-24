@@ -775,11 +775,6 @@ section {
   font-family: var(--font-mono);
   font-size: 0.875rem;
   color: var(--stone);
-  transition: color var(--duration-fast) var(--ease-out);
-}
-
-.footer__domain:hover {
-  color: var(--mist);
 }
 
 .footer__domain span {
