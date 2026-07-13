@@ -547,6 +547,34 @@ section {
   background: var(--stone);
 }
 
+.service-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  margin-top: var(--space-lg);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  background: var(--lead-500);
+  padding: 0.625rem 1.25rem;
+  border-radius: 2rem;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.service-card__cta:hover {
+  background: var(--lead-600);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.service-card__cta svg {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.service-card__cta:hover svg {
+  transform: translateX(3px);
+}
+
 /* --------------------------------------------------------------------------
    Founders Section
    -------------------------------------------------------------------------- */
@@ -777,8 +805,12 @@ section {
   color: var(--stone);
 }
 
-.footer__domain span {
+.footer__domain-em {
   color: var(--sage);
+}
+
+.footer__domain-tld {
+  color: var(--slate);
 }
 
 .footer__copyright {
