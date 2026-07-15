@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 96" width="380" height="96" role="img" aria-label="Range — Coaching and Consulting">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,500&amp;family=Inter:wght@600&amp;display=swap');
+      .rng-word { font-family: 'Crimson Pro', Georgia, 'Times New Roman', serif; font-style: italic; font-weight: 500; font-size: 52px; fill: #ffffff; }
+      .rng-tag  { font-family: 'Inter', system-ui, sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: 4.5px; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <!-- Range mark: bracket -> arrowhead + dot (domain to range) -->
+  <g transform="translate(2,23) scale(1.95)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M8 4V22M8 4H13M8 22H13" stroke="#ffffff" stroke-width="2.5"/>
+    <path d="M17 13H31" stroke="#ffffff" stroke-width="2"/>
+    <path d="M27 8L33 13L27 18" stroke="#4a7c67" stroke-width="2"/>
+    <circle cx="40" cy="13" r="4.5" fill="#4a7c67"/>
+  </g>
+
+  <!-- Wordmark + tagline -->
+  <text x="108" y="50" class="rng-word">Range</text>
+  <text x="110" y="74" class="rng-tag">COACHING · CONSULTING</text>
+</svg>

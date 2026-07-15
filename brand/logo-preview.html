@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Range Logo Preview</title>
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,500&family=Inter:wght@600&display=swap" rel="stylesheet">
+<style>
+  body { margin:0; font-family:'Inter',sans-serif; }
+  .panel { padding:56px; display:flex; align-items:center; gap:40px; flex-wrap:wrap; }
+  .label { position:absolute; font-size:11px; letter-spacing:2px; text-transform:uppercase; opacity:.6; margin-top:-32px; }
+  .dark  { background:#3a4a42; color:#fff; }
+  .photo { background:linear-gradient(120deg,#8ea499,#6f8a7d 55%,#4a5b52); color:#fff; }
+  .light { background:#fafbfa; color:#1e3a2f; }
+  svg { height:64px; width:auto; }
+  /* dark-on-light variant recolor */
+  .light .word { fill:#1e3a2f; }
+  .light .brk, .light .arw { stroke:#1e3a2f; }
+  .rng-word { font-family:'Crimson Pro',Georgia,serif; font-style:italic; font-weight:500; font-size:52px; }
+  .rng-tag  { font-family:'Inter',sans-serif; font-weight:600; font-size:12.5px; letter-spacing:4.5px; }
+</style>
+</head>
+<body>
+
+  <div class="panel dark"><span class="label">Dark green header</span>
+    <!--LOGO--><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 96" role="img" aria-label="Range Coaching and Consulting">
+      <g transform="translate(2,23) scale(1.95)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path class="brk" d="M8 4V22M8 4H13M8 22H13" stroke="#fff" stroke-width="2.5"/>
+        <path class="arw" d="M17 13H31" stroke="#fff" stroke-width="2"/>
+        <path d="M27 8L33 13L27 18" stroke="#4a7c67" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="40" cy="13" r="4.5" fill="#4a7c67"/>
+      </g>
+      <text x="108" y="50" class="rng-word word" fill="#fff">Range</text>
+      <text x="110" y="74" class="rng-tag" fill="#fff">COACHING · CONSULTING</text>
+    </svg>
+  </div>
+
+  <div class="panel photo"><span class="label">Over the photo hero (as on within-range.com)</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 96" role="img" aria-label="Range Coaching and Consulting">
+      <g transform="translate(2,23) scale(1.95)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 4V22M8 4H13M8 22H13" stroke="#fff" stroke-width="2.5"/>
+        <path d="M17 13H31" stroke="#fff" stroke-width="2"/>
+        <path d="M27 8L33 13L27 18" stroke="#4a7c67" stroke-width="2"/>
+        <circle cx="40" cy="13" r="4.5" fill="#4a7c67"/>
+      </g>
+      <text x="108" y="50" class="rng-word" fill="#fff">Range</text>
+      <text x="110" y="74" class="rng-tag" fill="#fff">COACHING · CONSULTING</text>
+    </svg>
+  </div>
+
+  <div class="panel light"><span class="label">Dark variant on light background (matches rangeassociates.com)</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 96" role="img" aria-label="Range Coaching and Consulting" class="dark-variant">
+      <g transform="translate(2,23) scale(1.95)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M8 4V22M8 4H13M8 22H13" stroke="#1e3a2f" stroke-width="2.5"/>
+        <path d="M17 13H31" stroke="#1e3a2f" stroke-width="2"/>
+        <path d="M27 8L33 13L27 18" stroke="#4a7c67" stroke-width="2"/>
+        <circle cx="40" cy="13" r="4.5" fill="#4a7c67"/>
+      </g>
+      <text x="108" y="50" class="rng-word" fill="#1e3a2f">Range</text>
+      <text x="110" y="74" class="rng-tag" fill="#5c6b64">COACHING · CONSULTING</text>
+    </svg>
+  </div>
+
+</body>
+</html>
