@@ -895,3 +895,430 @@ section {
 .skip-link:focus {
   top: var(--space-md);
 }
+
+/* --------------------------------------------------------------------------
+   Payments Page
+   -------------------------------------------------------------------------- */
+
+/* Compact hero for subpages - clears the fixed header */
+.page-hero {
+  padding-top: calc(var(--space-3xl) + 4rem);
+  padding-bottom: var(--space-2xl);
+  background: linear-gradient(180deg, var(--mist) 0%, var(--paper) 100%);
+}
+
+.page-hero__title {
+  margin-bottom: var(--space-md);
+}
+
+.page-hero__description {
+  font-size: 1.0625rem;
+  color: var(--slate);
+  max-width: 38rem;
+}
+
+/* Section scaffolding */
+.pay-section--alt {
+  background: var(--mist);
+}
+
+.pay-section__header {
+  margin-bottom: var(--space-xl);
+}
+
+.pay-section__header--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 38rem;
+}
+
+.pay-section__title {
+  margin-bottom: var(--space-sm);
+}
+
+.pay-section__subtitle {
+  font-size: 1.0625rem;
+  color: var(--slate);
+  max-width: 38rem;
+}
+
+.pay-section__header--center .pay-section__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Primary payment button */
+.btn-pay {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  background: var(--forest);
+  border: 1px solid var(--forest);
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.btn-pay:hover {
+  background: var(--pine);
+  border-color: var(--pine);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(30, 58, 47, 0.2);
+}
+
+.btn-pay svg {
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.btn-pay:hover svg {
+  transform: translateX(4px);
+}
+
+.btn-pay--full {
+  width: 100%;
+}
+
+/* Shown when a Stripe Payment Link has not been configured yet */
+.btn-pay--pending {
+  background: transparent;
+  color: var(--forest);
+  border-color: var(--stone);
+}
+
+.btn-pay--pending:hover {
+  background: var(--forest);
+  border-color: var(--forest);
+  color: white;
+}
+
+/* Invoice form */
+.pay-form {
+  background: white;
+  border: 1px solid var(--mist);
+  border-radius: 0.75rem;
+  padding: var(--space-xl);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 640px) {
+  .pay-form {
+    padding: var(--space-md);
+  }
+}
+
+.pay-field {
+  margin-bottom: var(--space-lg);
+}
+
+.pay-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--forest);
+  margin-bottom: var(--space-xs);
+}
+
+.pay-label__optional {
+  font-weight: 400;
+  color: var(--stone);
+}
+
+.pay-input {
+  display: block;
+  width: 100%;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--mist);
+  border-radius: 0.5rem;
+  padding: 0.875rem 1rem;
+  transition: border-color var(--duration-fast) var(--ease-out),
+              box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.pay-input::placeholder {
+  color: var(--stone);
+}
+
+.pay-input:focus {
+  outline: none;
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(74, 124, 103, 0.15);
+}
+
+.pay-input[aria-invalid="true"] {
+  border-color: var(--ember);
+}
+
+.pay-input[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
+}
+
+.pay-hint {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--stone);
+  margin: var(--space-xs) 0 0;
+}
+
+.pay-error {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--ember);
+  margin: var(--space-xs) 0 0;
+}
+
+.pay-note {
+  font-size: 0.8125rem;
+  color: var(--stone);
+  text-align: center;
+  margin: var(--space-sm) 0 0;
+}
+
+/* Engagement cards */
+.pay-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .pay-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+.pay-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  padding: var(--space-xl);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all var(--duration-normal) var(--ease-out);
+}
+
+.pay-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.pay-card__title {
+  margin-bottom: var(--space-xs);
+}
+
+.pay-card__price {
+  font-family: var(--font-mono);
+  font-size: 2rem;
+  color: var(--forest);
+  line-height: 1.2;
+  margin-bottom: 0.25rem;
+}
+
+.pay-card__period {
+  font-size: 1rem;
+  color: var(--stone);
+}
+
+.pay-card__meta {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sage);
+  margin-bottom: var(--space-md);
+}
+
+.pay-card__description {
+  font-size: 0.9375rem;
+  color: var(--slate);
+  margin-bottom: var(--space-md);
+}
+
+.pay-card__list {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+
+.pay-card__list li {
+  position: relative;
+  padding-left: var(--space-md);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--slate);
+  margin-bottom: var(--space-xs);
+}
+
+.pay-card__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6875rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+}
+
+/* Push the button to the bottom so cards of differing height stay aligned */
+.pay-card .btn-pay {
+  margin-top: auto;
+}
+
+/* Deposit */
+.pay-deposit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  background: white;
+  border: 1px solid var(--mist);
+  border-radius: 0.75rem;
+  padding: var(--space-xl);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+@media (max-width: 640px) {
+  .pay-deposit {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    padding: var(--space-md);
+  }
+
+  .pay-deposit .btn-pay {
+    width: 100%;
+  }
+}
+
+.pay-deposit__label {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--sage);
+  margin-bottom: var(--space-xs);
+}
+
+.pay-deposit__price {
+  font-family: var(--font-mono);
+  font-size: 2.5rem;
+  color: var(--forest);
+  line-height: 1;
+}
+
+/* Trust strip */
+.pay-trust {
+  background: var(--forest);
+  padding: var(--space-2xl) 0;
+}
+
+.pay-trust__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.pay-trust__icon {
+  flex-shrink: 0;
+  color: var(--sage);
+  margin-top: 0.125rem;
+}
+
+.pay-trust__title {
+  font-weight: 600;
+  color: white;
+  margin-bottom: var(--space-xs);
+}
+
+.pay-trust__text {
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pay-trust__text a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.pay-trust__text a:hover {
+  color: var(--mist);
+}
+
+/* Payment confirmation page */
+.confirm {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  padding-top: calc(var(--space-3xl) + 4rem);
+  text-align: center;
+}
+
+.confirm__content {
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.confirm__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--mist);
+  color: var(--pine);
+  margin-bottom: var(--space-lg);
+}
+
+.confirm__title {
+  margin-bottom: var(--space-md);
+}
+
+.confirm__description {
+  font-size: 1.0625rem;
+  color: var(--slate);
+  margin-bottom: var(--space-md);
+}
+
+.confirm__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.confirm__secondary {
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  color: var(--slate);
+}
+
+/* Footer logo is a link on subpages */
+.footer__logo:hover .footer__wordmark {
+  color: var(--mist);
+}
+
+.footer__link {
+  font-size: 0.8125rem;
+  color: var(--stone);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.footer__link:hover {
+  color: var(--mist);
+}
