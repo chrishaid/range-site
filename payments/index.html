@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Make a Payment | Range</title>
-  <meta name="description" content="Pay a Range invoice, purchase a coaching or consulting engagement, or place an engagement deposit. Payments are securely processed by Stripe.">
+  <meta name="description" content="Pay a Range invoice or book a caregiver community session. Payments are securely processed by Stripe.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Make a Payment | Range">
-  <meta property="og:description" content="Pay a Range invoice or engagement securely via Stripe.">
+  <meta property="og:description" content="Pay a Range invoice or book a caregiver community session, securely via Stripe.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rangeassociates.com/payments">
 
@@ -51,7 +51,7 @@
       <div class="container container--narrow">
         <span class="section-label">Payments</span>
         <h1 class="page-hero__title">Make a payment</h1>
-        <p class="page-hero__description">Settle an invoice, purchase an engagement, or place a deposit to begin work. All payments are processed securely by Stripe &mdash; Range never receives or stores your card details.</p>
+        <p class="page-hero__description">Settle an invoice or book a caregiver community session. All payments are processed securely by Stripe &mdash; Range never receives or stores your card details.</p>
       </div>
     </section>
 
@@ -61,145 +61,51 @@
         <div class="pay-section__header">
           <span class="section-label">Option One</span>
           <h2 class="pay-section__title">Pay an invoice</h2>
-          <p class="pay-section__subtitle">For engagements billed hourly or by milestone. Enter the invoice number from the invoice we sent you, then enter the amount on the secure payment page.</p>
+          <p class="pay-section__subtitle">Consulting and coaching engagements are priced per proposal, so we invoice you directly. Pay from the button in your invoice email, or use the link below &mdash; you&rsquo;ll enter your invoice number and the amount on the secure payment page.</p>
         </div>
 
-        <form class="pay-form" id="invoice-form" novalidate>
-          <div class="pay-field">
-            <label class="pay-label" for="invoice-number">Invoice number</label>
-            <input
-              class="pay-input"
-              type="text"
-              id="invoice-number"
-              name="invoice-number"
-              inputmode="text"
-              autocomplete="off"
-              maxlength="200"
-              placeholder="INV-1042"
-              aria-describedby="invoice-number-hint invoice-number-error"
-              required>
-            <p class="pay-hint" id="invoice-number-hint">Letters, numbers, dashes, and underscores only. This is passed to Stripe so we can match your payment to the right invoice.</p>
-            <p class="pay-error" id="invoice-number-error" role="alert" hidden></p>
+        <div class="pay-offering">
+          <div class="pay-offering__head">
+            <div>
+              <h3 class="pay-offering__title">Professional Services</h3>
+              <p class="pay-offering__meta">Amount per your invoice</p>
+            </div>
           </div>
-
-          <div class="pay-field">
-            <label class="pay-label" for="invoice-email">Email <span class="pay-label__optional">(optional)</span></label>
-            <input
-              class="pay-input"
-              type="email"
-              id="invoice-email"
-              name="invoice-email"
-              autocomplete="email"
-              placeholder="you@organization.org"
-              aria-describedby="invoice-email-hint invoice-email-error">
-            <p class="pay-hint" id="invoice-email-hint">Pre-fills the receipt address on the payment page. You can change it there.</p>
-            <p class="pay-error" id="invoice-email-error" role="alert" hidden></p>
-          </div>
-
-          <button class="btn-pay btn-pay--full" type="submit" data-link-key="invoice">
+          <button class="btn-pay btn-pay--full" type="button" data-link-key="invoice">
             <span class="btn-pay__label">Continue to secure payment</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </button>
-          <p class="pay-note" data-note-for="invoice">You&rsquo;ll enter the invoice amount on the next screen.</p>
-        </form>
-      </div>
-    </section>
-
-    <!-- Engagements -->
-    <!--
-      PLACEHOLDER CONTENT: the three package names, descriptions, and prices below are
-      samples. Replace them with your real offerings and prices before going live.
-      The prices shown here are display-only; the amount actually charged is whatever
-      is configured on the corresponding Stripe Payment Link. Keep the two in sync.
-    -->
-    <section class="pay-section pay-section--alt" id="engagements">
-      <div class="container">
-        <div class="pay-section__header pay-section__header--center">
-          <span class="section-label">Option Two</span>
-          <h2 class="pay-section__title">Engagements</h2>
-          <p class="pay-section__subtitle">Fixed-scope offerings you can purchase directly. Not sure which fits? <a href="mailto:hello@rangeassociates.com">Start a conversation</a> and we&rsquo;ll help you choose.</p>
-        </div>
-
-        <div class="pay-grid">
-          <div class="pay-card animate-on-scroll">
-            <h3 class="pay-card__title">Discovery Sprint</h3>
-            <p class="pay-card__price">$4,500</p>
-            <p class="pay-card__meta">Two weeks &middot; one-time</p>
-            <p class="pay-card__description">A focused diagnostic of your leadership, data, or process challenge, ending in a written set of recommendations.</p>
-            <ul class="pay-card__list">
-              <li>Stakeholder interviews</li>
-              <li>Current-state assessment</li>
-              <li>Prioritized recommendations</li>
-              <li>Readout session</li>
-            </ul>
-            <button class="btn-pay btn-pay--full" type="button" data-link-key="discovery">
-              <span class="btn-pay__label">Purchase</span>
-            </button>
-            <p class="pay-note" data-note-for="discovery" hidden></p>
-          </div>
-
-          <div class="pay-card animate-on-scroll">
-            <h3 class="pay-card__title">Coaching Block</h3>
-            <p class="pay-card__price">$6,000</p>
-            <p class="pay-card__meta">Six sessions &middot; one-time</p>
-            <p class="pay-card__description">A block of one-to-one executive coaching sessions built on the 70-20-10 framework, scheduled at your pace.</p>
-            <ul class="pay-card__list">
-              <li>Six 60-minute sessions</li>
-              <li>Strengths and goals intake</li>
-              <li>Between-session support</li>
-              <li>Progress review</li>
-            </ul>
-            <button class="btn-pay btn-pay--full" type="button" data-link-key="coaching">
-              <span class="btn-pay__label">Purchase</span>
-            </button>
-            <p class="pay-note" data-note-for="coaching" hidden></p>
-          </div>
-
-          <div class="pay-card animate-on-scroll">
-            <h3 class="pay-card__title">Monthly Retainer</h3>
-            <p class="pay-card__price">$8,000<span class="pay-card__period">/month</span></p>
-            <p class="pay-card__meta">Ongoing &middot; cancel anytime</p>
-            <p class="pay-card__description">Continuous partnership across leadership, analytics, and process work, with a standing allocation of our time each month.</p>
-            <ul class="pay-card__list">
-              <li>Standing monthly allocation</li>
-              <li>Priority scheduling</li>
-              <li>Cross-domain support</li>
-              <li>Quarterly planning</li>
-            </ul>
-            <button class="btn-pay btn-pay--full" type="button" data-link-key="retainer">
-              <span class="btn-pay__label">Subscribe</span>
-            </button>
-            <p class="pay-note" data-note-for="retainer" hidden></p>
-          </div>
+          <p class="pay-note" data-note-for="invoice">Pay by card or bank transfer. Bank transfer costs us less, so we prefer it for larger invoices.</p>
         </div>
       </div>
     </section>
 
-    <!-- Deposit -->
-    <section class="pay-section" id="deposit">
+    <!-- Caregiver Community Sessions -->
+    <section class="pay-section pay-section--alt" id="sessions">
       <div class="container container--narrow">
         <div class="pay-section__header">
-          <span class="section-label">Option Three</span>
-          <h2 class="pay-section__title">Engagement deposit</h2>
-          <p class="pay-section__subtitle">If we&rsquo;ve agreed on scope and you&rsquo;re ready to begin, this deposit reserves your start date and is credited against your first invoice.</p>
+          <span class="section-label">Option Two</span>
+          <h2 class="pay-section__title">Caregiver community sessions</h2>
+          <p class="pay-section__subtitle">Facilitated group sessions supporting caregivers, led by Amy Pouba. Book a single session or several at once &mdash; you&rsquo;ll choose how many at checkout.</p>
         </div>
 
-        <div class="pay-deposit">
-          <div class="pay-deposit__amount">
-            <span class="pay-deposit__label">Deposit</span>
-            <span class="pay-deposit__price">$2,500</span>
+        <div class="pay-offering">
+          <div class="pay-offering__head">
+            <div>
+              <h3 class="pay-offering__title">Caregiver Community Session</h3>
+              <p class="pay-offering__meta">Per session &middot; book one or more</p>
+            </div>
+            <p class="pay-offering__price">$110<span class="pay-offering__period">/session</span></p>
           </div>
-          <div class="pay-deposit__action">
-            <button class="btn-pay" type="button" data-link-key="deposit">
-              <span class="btn-pay__label">Place deposit</span>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </button>
-            <p class="pay-note" data-note-for="deposit" hidden></p>
-          </div>
+          <button class="btn-pay btn-pay--full" type="button" data-link-key="caregiverSession">
+            <span class="btn-pay__label">Book a session</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <p class="pay-note" data-note-for="caregiverSession">You&rsquo;ll be asked for the participant name and which session date you&rsquo;re attending.</p>
         </div>
       </div>
     </section>
@@ -243,74 +149,48 @@
   <!-- Scripts -->
   <script>
     /* ======================================================================
-       STRIPE PAYMENT LINK CONFIGURATION
+       STRIPE PAYMENT LINKS
 
-       This site is static (GitHub Pages), so there is no server to run.
-       Payments therefore use Stripe Payment Links: links you create in the
-       Stripe Dashboard that send the customer to Stripe's own hosted
-       checkout page. No API keys are needed here, and no secret key must
-       EVER be placed in this repository -- it is public.
+       This site is static (GitHub Pages), so there is no server. Payments go
+       to Stripe's hosted checkout via Payment Links. No API key is needed
+       here, and no secret key must EVER live in this repo -- it is public.
 
-       To go live, create each link at
-       https://dashboard.stripe.com/payment-links and paste its URL below.
+       Both links below are LIVE and take real money. Stripe collects the
+       amount, the invoice number, and the participant details on its own
+       page, so nothing sensitive is gathered on rangeassociates.com.
 
-         invoice   -> product priced "Customers choose what they pay"
-                      (so the client enters the invoice amount themselves)
-         discovery -> one-time price, matching the Discovery Sprint price above
-         coaching  -> one-time price, matching the Coaching Block price above
-         retainer  -> RECURRING monthly price, matching the Retainer price above
-         deposit   -> one-time price, matching the deposit amount above
+         invoice          -> Professional Services Contract, customer enters
+                             the amount; required "Invoice number" field.
+                             Card + ACH bank debit (ACH is 0.8% capped at $5
+                             vs 2.9% + 30c, so it matters on large invoices).
+         caregiverSession -> $110 per session, quantity adjustable 1-10, with
+                             participant name and session date collected.
 
-       On each link, under "After payment", choose "Redirect customers to
-       your website" and set the URL to:
-         https://rangeassociates.com/payments/thank-you/
+       Both redirect to /payments/thank-you/ after payment.
 
-       Any key left as an empty string below falls back to an email link, so
-       the page never shows a dead button while you finish setting things up.
+       If a key is left empty, its button falls back to an email link rather
+       than sending the visitor nowhere.
        ====================================================================== */
     const PAYMENT_LINKS = {
-      invoice:   '',
-      discovery: '',
-      coaching:  '',
-      retainer:  '',
-      deposit:   ''
+      invoice:          'https://buy.stripe.com/7sYaEXgHmelU8jg5VugEg01',
+      caregiverSession: 'https://buy.stripe.com/bJe3cv9eU5Po8jggA8gEg00'
     };
 
     const CONTACT_EMAIL = 'hello@rangeassociates.com';
 
-    // Fallback subjects used when a Payment Link is not configured yet.
     const FALLBACK_SUBJECTS = {
-      invoice:   'Invoice payment',
-      discovery: 'Discovery Sprint',
-      coaching:  'Coaching Block',
-      retainer:  'Monthly Retainer',
-      deposit:   'Engagement deposit'
+      invoice:          'Invoice payment',
+      caregiverSession: 'Caregiver community session'
     };
-
-    // Stripe drops client_reference_id values containing anything outside
-    // alphanumerics, dashes, and underscores, so strip them before sending.
-    const sanitizeReference = (value) =>
-      value.trim().replace(/[^A-Za-z0-9_-]/g, '').slice(0, 200);
 
     const isConfigured = (key) => Boolean(PAYMENT_LINKS[key]);
 
-    const fallbackHref = (key, reference) => {
+    const fallbackHref = (key) => {
       const subject = FALLBACK_SUBJECTS[key] || 'Payment';
-      const suffix = reference ? ` ${reference}` : '';
-      return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`${subject}${suffix}`)}`;
+      return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;
     };
 
-    // Builds the Stripe Payment Link URL, attaching the reconciliation id and
-    // receipt email as documented query parameters.
-    const buildPaymentUrl = (key, { reference, email } = {}) => {
-      const url = new URL(PAYMENT_LINKS[key]);
-      if (reference) url.searchParams.set('client_reference_id', reference);
-      if (email) url.searchParams.set('prefilled_email', email);
-      return url.toString();
-    };
-
-    // Mark every unconfigured button so it degrades to an email link instead
-    // of sending the visitor nowhere.
+    // Any unconfigured button degrades to an email link instead of a dead control.
     document.querySelectorAll('[data-link-key]').forEach((button) => {
       const key = button.dataset.linkKey;
       if (isConfigured(key)) return;
@@ -320,64 +200,13 @@
       if (label) label.textContent = 'Request payment instructions';
 
       const note = document.querySelector(`[data-note-for="${key}"]`);
-      if (note) {
-        note.textContent = 'Card payment for this option isn’t live yet — we’ll email you instructions.';
-        note.hidden = false;
-      }
+      if (note) note.textContent = 'Card payment for this option isn\u2019t live yet \u2014 we\u2019ll email you instructions.';
     });
 
-    // Invoice form: validate, then hand off to Stripe.
-    const invoiceForm = document.getElementById('invoice-form');
-    const numberInput = document.getElementById('invoice-number');
-    const numberError = document.getElementById('invoice-number-error');
-    const emailInput = document.getElementById('invoice-email');
-    const emailError = document.getElementById('invoice-email-error');
-
-    const showError = (input, element, message) => {
-      element.textContent = message;
-      element.hidden = false;
-      input.setAttribute('aria-invalid', 'true');
-    };
-
-    const clearError = (input, element) => {
-      element.hidden = true;
-      input.removeAttribute('aria-invalid');
-    };
-
-    numberInput.addEventListener('input', () => clearError(numberInput, numberError));
-    emailInput.addEventListener('input', () => clearError(emailInput, emailError));
-
-    invoiceForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      const reference = sanitizeReference(numberInput.value);
-      if (!reference) {
-        showError(numberInput, numberError, 'Enter the invoice number shown on your invoice.');
-        numberInput.focus();
-        return;
-      }
-
-      const email = emailInput.value.trim();
-      // checkValidity() reflects the input's type="email" constraint.
-      if (email && !emailInput.checkValidity()) {
-        showError(emailInput, emailError, 'Enter a valid email address, or leave this blank.');
-        emailInput.focus();
-        return;
-      }
-
-      window.location.href = isConfigured('invoice')
-        ? buildPaymentUrl('invoice', { reference, email })
-        : fallbackHref('invoice', reference);
-    });
-
-    // Package and deposit buttons. The invoice button is type="submit" and is
-    // excluded here so it stays owned by the form's submit handler above.
-    document.querySelectorAll('button[type="button"][data-link-key]').forEach((button) => {
+    document.querySelectorAll('button[data-link-key]').forEach((button) => {
       button.addEventListener('click', () => {
         const key = button.dataset.linkKey;
-        window.location.href = isConfigured(key)
-          ? buildPaymentUrl(key)
-          : fallbackHref(key);
+        window.location.href = isConfigured(key) ? PAYMENT_LINKS[key] : fallbackHref(key);
       });
     });
 
@@ -390,14 +219,9 @@
     // Scroll-triggered animations using Intersection Observer
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('is-visible');
       });
-    }, {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
     document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
   </script>

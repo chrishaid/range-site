@@ -926,13 +926,6 @@ section {
   margin-bottom: var(--space-xl);
 }
 
-.pay-section__header--center {
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 38rem;
-}
-
 .pay-section__title {
   margin-bottom: var(--space-sm);
 }
@@ -941,11 +934,6 @@ section {
   font-size: 1.0625rem;
   color: var(--slate);
   max-width: 38rem;
-}
-
-.pay-section__header--center .pay-section__subtitle {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Primary payment button */
@@ -999,84 +987,6 @@ section {
   color: white;
 }
 
-/* Invoice form */
-.pay-form {
-  background: white;
-  border: 1px solid var(--mist);
-  border-radius: 0.75rem;
-  padding: var(--space-xl);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-}
-
-@media (max-width: 640px) {
-  .pay-form {
-    padding: var(--space-md);
-  }
-}
-
-.pay-field {
-  margin-bottom: var(--space-lg);
-}
-
-.pay-label {
-  display: block;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--forest);
-  margin-bottom: var(--space-xs);
-}
-
-.pay-label__optional {
-  font-weight: 400;
-  color: var(--stone);
-}
-
-.pay-input {
-  display: block;
-  width: 100%;
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  color: var(--ink);
-  background: var(--paper);
-  border: 1px solid var(--mist);
-  border-radius: 0.5rem;
-  padding: 0.875rem 1rem;
-  transition: border-color var(--duration-fast) var(--ease-out),
-              box-shadow var(--duration-fast) var(--ease-out);
-}
-
-.pay-input::placeholder {
-  color: var(--stone);
-}
-
-.pay-input:focus {
-  outline: none;
-  border-color: var(--sage);
-  box-shadow: 0 0 0 3px rgba(74, 124, 103, 0.15);
-}
-
-.pay-input[aria-invalid="true"] {
-  border-color: var(--ember);
-}
-
-.pay-input[aria-invalid="true"]:focus {
-  box-shadow: 0 0 0 3px rgba(194, 65, 12, 0.15);
-}
-
-.pay-hint {
-  font-size: 0.8125rem;
-  line-height: 1.5;
-  color: var(--stone);
-  margin: var(--space-xs) 0 0;
-}
-
-.pay-error {
-  font-size: 0.8125rem;
-  font-weight: 500;
-  color: var(--ember);
-  margin: var(--space-xs) 0 0;
-}
-
 .pay-note {
   font-size: 0.8125rem;
   color: var(--stone);
@@ -1084,104 +994,8 @@ section {
   margin: var(--space-sm) 0 0;
 }
 
-/* Engagement cards */
-.pay-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  align-items: start;
-}
-
-@media (max-width: 1024px) {
-  .pay-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
-}
-
-.pay-card {
-  display: flex;
-  flex-direction: column;
-  background: white;
-  border: 1px solid transparent;
-  border-radius: 0.75rem;
-  padding: var(--space-xl);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: all var(--duration-normal) var(--ease-out);
-}
-
-.pay-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-}
-
-.pay-card__title {
-  margin-bottom: var(--space-xs);
-}
-
-.pay-card__price {
-  font-family: var(--font-mono);
-  font-size: 2rem;
-  color: var(--forest);
-  line-height: 1.2;
-  margin-bottom: 0.25rem;
-}
-
-.pay-card__period {
-  font-size: 1rem;
-  color: var(--stone);
-}
-
-.pay-card__meta {
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--sage);
-  margin-bottom: var(--space-md);
-}
-
-.pay-card__description {
-  font-size: 0.9375rem;
-  color: var(--slate);
-  margin-bottom: var(--space-md);
-}
-
-.pay-card__list {
-  list-style: none;
-  margin-bottom: var(--space-lg);
-}
-
-.pay-card__list li {
-  position: relative;
-  padding-left: var(--space-md);
-  font-size: 0.9375rem;
-  line-height: 1.6;
-  color: var(--slate);
-  margin-bottom: var(--space-xs);
-}
-
-.pay-card__list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.6875rem;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--sage);
-}
-
-/* Push the button to the bottom so cards of differing height stay aligned */
-.pay-card .btn-pay {
-  margin-top: auto;
-}
-
-/* Deposit */
-.pay-deposit {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-lg);
+/* Single offering panel (caregiver sessions) */
+.pay-offering {
   background: white;
   border: 1px solid var(--mist);
   border-radius: 0.75rem;
@@ -1190,33 +1004,51 @@ section {
 }
 
 @media (max-width: 640px) {
-  .pay-deposit {
-    flex-direction: column;
-    align-items: stretch;
-    text-align: center;
+  .pay-offering {
     padding: var(--space-md);
   }
+}
 
-  .pay-deposit .btn-pay {
-    width: 100%;
+.pay-offering__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-md);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--mist);
+}
+
+@media (max-width: 640px) {
+  .pay-offering__head {
+    flex-direction: column;
+    gap: var(--space-xs);
   }
 }
 
-.pay-deposit__label {
-  display: block;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--sage);
-  margin-bottom: var(--space-xs);
+.pay-offering__title {
+  margin-bottom: 0.25rem;
 }
 
-.pay-deposit__price {
+.pay-offering__meta {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sage);
+}
+
+.pay-offering__price {
+  flex-shrink: 0;
   font-family: var(--font-mono);
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   color: var(--forest);
   line-height: 1;
+  white-space: nowrap;
+}
+
+.pay-offering__period {
+  font-size: 0.9375rem;
+  color: var(--stone);
 }
 
 /* Trust strip */
