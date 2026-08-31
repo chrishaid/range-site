@@ -186,7 +186,7 @@
         <div class="pay-offering">
           <div class="pay-offering__head">
             <div>
-              <h3 class="pay-offering__title">EdTribune Transition Memo</h3>
+              <h3 class="pay-offering__title">Ed Tribune State of the District &amp; Transition Memo</h3>
               <p class="pay-offering__meta">Amount as quoted &middot; paid to Range Associates LLC</p>
             </div>
           </div>
@@ -196,7 +196,7 @@
               <path d="M5 12h14M12 5l7 7-7 7"/>
             </svg>
           </button>
-          <p class="pay-note" data-note-for="transitionMemo">You&rsquo;ll enter the quoted amount and your district name on the next page. Pay by card or bank transfer &mdash; bank transfer costs us less, so we prefer it at these amounts.</p>
+          <p class="pay-note" data-note-for="transitionMemo">On the next page you&rsquo;ll enter the quoted amount, your district or organization, and your quote or PO number if you have one. Pay by card or bank transfer &mdash; bank transfer costs us less, so we prefer it at these amounts.</p>
         </div>
 
         <p class="quote-required">Don&rsquo;t have a quote yet? Email <a href="mailto:hello@rangeassociates.com">hello@rangeassociates.com</a> and we&rsquo;ll scope the memo for your district first. Please don&rsquo;t send a payment before a quote is agreed.</p>
@@ -254,12 +254,21 @@
                          are negotiated per district and early pilots are
                          discounted.
 
-       PASTE THE LIVE PAYMENT LINK URL BELOW (https://buy.stripe.com/...).
-       While it is empty the button degrades to an email link rather than
-       sending the visitor nowhere -- so this page is safe to ship unwired.
+       This link is LIVE and takes real money. Stripe collects the amount, the
+       district name, and an optional quote/PO number on its own page, so
+       nothing sensitive is gathered on rangeassociates.com. It redirects to
+       /payments/thank-you/ after payment.
+
+         plink_1UAUoyGIeQDVGKRcjjCMlRqd
+         -> price_1UAIlnGIeQDVGKRcrhEGQ6KT (custom_unit_amount, $4,000 preset)
+         -> prod_VAaHk90VKiG3kI "Ed Tribune State of the District &
+            Transition Memo"
+
+       If the key is emptied, the button falls back to an email link rather
+       than sending the visitor nowhere.
        ====================================================================== */
     const PAYMENT_LINKS = {
-      transitionMemo: ''
+      transitionMemo: 'https://buy.stripe.com/aFaaEX2Qwa5E1US2JigEg04'
     };
 
     const CONTACT_EMAIL = 'hello@rangeassociates.com';
