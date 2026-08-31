@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EdTribune Transition Memo | Payment | Range</title>
+  <meta name="description" content="Secure payment for an EdTribune Leadership Transition Memo. Payment is made to Range Associates LLC, a founding partner of EdTribune.">
+
+  <!-- This page is shared directly with prospective clients and is intentionally
+       not linked from anywhere on the site. Keep it out of search results. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+    /* Page-scoped additions. The shared stylesheet carries the payments
+       vocabulary (.pay-section, .pay-offering, .btn-pay, .pay-trust); only the
+       payee-attribution block and the deliverable list are new here. */
+
+    /* The single most important element on the page: who is being paid.
+       Sits directly under the hero so it is read before any button. */
+    .payee {
+      border: 1px solid var(--sage);
+      border-left: 4px solid var(--sage);
+      border-radius: 4px;
+      background: var(--mist);
+      padding: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+
+    .payee__label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pine);
+      margin-bottom: var(--space-xs);
+    }
+
+    .payee__title {
+      font-family: var(--font-display);
+      font-size: 1.375rem;
+      line-height: 1.3;
+      color: var(--ink);
+      margin-bottom: var(--space-sm);
+    }
+
+    .payee__text {
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--slate);
+      margin-bottom: var(--space-sm);
+    }
+
+    .payee__text:last-child { margin-bottom: 0; }
+
+    .payee strong { color: var(--ink); font-weight: 600; }
+
+    /* The statement-descriptor line: the practical detail that prevents a
+       "who is Range?" support email after the charge posts. */
+    .payee__statement {
+      font-family: var(--font-mono);
+      font-size: 0.875rem;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--stone);
+      border-radius: 3px;
+      padding: 0.75rem 1rem;
+      display: inline-block;
+    }
+
+    .deliverable {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-md) 0 0;
+    }
+
+    .deliverable li {
+      position: relative;
+      padding-left: 1.75rem;
+      margin-bottom: 0.75rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
+
+    .deliverable li::before {
+      content: "";
+      position: absolute;
+      left: 0.375rem;
+      top: 0.65rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--sage);
+    }
+
+    .quote-required {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+      color: var(--slate);
+      border-top: 1px solid var(--mist);
+      margin-top: var(--space-lg);
+      padding-top: var(--space-md);
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <div class="header__inner">
+        <a href="/" class="header__logo">
+          <svg width="40" height="22" viewBox="0 0 48 26" fill="none" aria-hidden="true">
+            <path d="M8 4V22M8 4H13M8 22H13" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17 13H31" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M27 8L33 13L27 18" stroke="#4a7c67" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="40" cy="13" r="4.5" fill="#4a7c67"/>
+          </svg>
+          <span class="header__wordmark">Range</span>
+        </a>
+        <a href="mailto:hello@rangeassociates.com" class="header__cta">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="page-hero">
+      <div class="container container--narrow">
+        <span class="section-label">EdTribune &middot; Payment</span>
+        <h1 class="page-hero__title">Leadership Transition Memo</h1>
+        <p class="page-hero__description">Secure payment for the EdTribune Leadership Transition Memo commissioned for your district. Use the amount on your quote or invoice.</p>
+
+        <!-- Payee attribution: deliberately the first thing after the title. -->
+        <div class="payee">
+          <p class="payee__label">Who you are paying</p>
+          <p class="payee__title">Payment is made to Range Associates LLC, a founding partner of EdTribune.</p>
+          <p class="payee__text">EdTribune is the publication that researches, writes, and delivers your memo. <strong>Range Associates LLC</strong> is one of its founding partners and handles billing and payment processing for this engagement. Your contract, receipt, and any refund are all with Range Associates LLC.</p>
+          <p class="payee__text">Your card or bank statement will show:</p>
+          <p class="payee__statement">RANGE ASSOCIATES</p>
+          <p class="payee__text" style="margin-top: var(--space-sm);">It will not say EdTribune. If your business office is matching a payment to a purchase order, the vendor of record is <strong>Range Associates LLC</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- What you're paying for -->
+    <section class="pay-section" id="deliverable">
+      <div class="container container--narrow">
+        <div class="pay-section__header">
+          <span class="section-label">What this covers</span>
+          <h2 class="pay-section__title">The memo, delivered</h2>
+          <p class="pay-section__subtitle">A board-ready briefing on your district&rsquo;s own public data, built for an incoming leader&rsquo;s first weeks.</p>
+        </div>
+
+        <ul class="deliverable">
+          <li>A landscape, board-ready PDF briefing, one claim per page, built entirely from your state&rsquo;s published education data.</li>
+          <li>A reproducible analysis script that regenerates every number in the memo directly from the raw state files, with no proprietary dependency.</li>
+          <li>Delivery no later than two weeks after a fully executed purchase order is received.</li>
+          <li>Editorial independence: EdTribune holds no district contract to renew and no stake in the answer.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Payment -->
+    <section class="pay-section pay-section--alt" id="pay">
+      <div class="container container--narrow">
+        <div class="pay-section__header">
+          <span class="section-label">Payment</span>
+          <h2 class="pay-section__title">Pay your quoted amount</h2>
+          <p class="pay-section__subtitle">Transition memos are priced per district and per scope, so the amount is the one on your quote or invoice &mdash; including any pilot rate we agreed. You&rsquo;ll enter it on Stripe&rsquo;s secure payment page.</p>
+        </div>
+
+        <div class="pay-offering">
+          <div class="pay-offering__head">
+            <div>
+              <h3 class="pay-offering__title">EdTribune Transition Memo</h3>
+              <p class="pay-offering__meta">Amount as quoted &middot; paid to Range Associates LLC</p>
+            </div>
+          </div>
+          <button class="btn-pay btn-pay--full" type="button" data-link-key="transitionMemo">
+            <span class="btn-pay__label">Continue to secure payment</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </button>
+          <p class="pay-note" data-note-for="transitionMemo">You&rsquo;ll enter the quoted amount and your district name on the next page. Pay by card or bank transfer &mdash; bank transfer costs us less, so we prefer it at these amounts.</p>
+        </div>
+
+        <p class="quote-required">Don&rsquo;t have a quote yet? Email <a href="mailto:hello@rangeassociates.com">hello@rangeassociates.com</a> and we&rsquo;ll scope the memo for your district first. Please don&rsquo;t send a payment before a quote is agreed.</p>
+      </div>
+    </section>
+
+    <!-- Trust -->
+    <section class="pay-trust">
+      <div class="container container--narrow">
+        <div class="pay-trust__inner">
+          <svg class="pay-trust__icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          <div>
+            <p class="pay-trust__title">Secure by design</p>
+            <p class="pay-trust__text">Payments are handled entirely on Stripe&rsquo;s hosted checkout, under the Range Associates LLC merchant account. Card details are never entered on, transmitted to, or stored by rangeassociates.com. Questions about a quote, an invoice, or a payment? Email <a href="mailto:hello@rangeassociates.com">hello@rangeassociates.com</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="/" class="footer__logo">
+          <svg width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <path d="M14 14V34M14 14H19M14 34H19" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22 24H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M29 20L34 24L29 28" stroke="#4a7c67" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="38" cy="24" r="4" fill="#4a7c67"/>
+          </svg>
+          <span class="footer__wordmark">Range</span>
+        </a>
+        <p class="footer__domain"><span class="footer__domain-em">range</span>associates<span class="footer__domain-tld">.com</span></p>
+        <p class="footer__copyright">&copy; 2026 Range Associates LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    /* ======================================================================
+       STRIPE PAYMENT LINK
+
+       This site is static (GitHub Pages), so there is no server. Payment goes
+       to Stripe's hosted checkout via a Payment Link. No API key is needed
+       here, and no secret key must EVER live in this repo -- it is public.
+
+       transitionMemo -> the "EdTribune Transition Memo" product in the Range
+                         Associates LLC Stripe account. Customer-named price
+                         (the buyer enters the quoted amount), because memos
+                         are negotiated per district and early pilots are
+                         discounted.
+
+       PASTE THE LIVE PAYMENT LINK URL BELOW (https://buy.stripe.com/...).
+       While it is empty the button degrades to an email link rather than
+       sending the visitor nowhere -- so this page is safe to ship unwired.
+       ====================================================================== */
+    const PAYMENT_LINKS = {
+      transitionMemo: ''
+    };
+
+    const CONTACT_EMAIL = 'hello@rangeassociates.com';
+
+    const FALLBACK_SUBJECTS = {
+      transitionMemo: 'EdTribune Transition Memo payment'
+    };
+
+    const isConfigured = (key) => Boolean(PAYMENT_LINKS[key]);
+
+    const fallbackHref = (key) => {
+      const subject = FALLBACK_SUBJECTS[key] || 'Payment';
+      return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;
+    };
+
+    // Any unconfigured button degrades to an email link instead of a dead control.
+    document.querySelectorAll('[data-link-key]').forEach((button) => {
+      const key = button.dataset.linkKey;
+      if (isConfigured(key)) return;
+
+      button.classList.add('btn-pay--pending');
+      const label = button.querySelector('.btn-pay__label');
+      if (label) label.textContent = 'Request payment instructions';
+
+      const note = document.querySelector(`[data-note-for="${key}"]`);
+      if (note) note.textContent = 'Card payment isn’t switched on for this page yet — email us and we’ll send payment instructions for your quoted amount.';
+    });
+
+    document.querySelectorAll('button[data-link-key]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const key = button.dataset.linkKey;
+        window.location.href = isConfigured(key) ? PAYMENT_LINKS[key] : fallbackHref(key);
+      });
+    });
+
+    // Header scroll effect
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
