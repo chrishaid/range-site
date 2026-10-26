@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Make a Payment | Range</title>
-  <meta name="description" content="Pay a Range invoice or book a caregiver community session. Payments are securely processed by Stripe.">
+  <meta name="description" content="Pay a Range consulting invoice or contribute to the Caregiving Community Cohort. Payments are securely processed by Stripe.">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Make a Payment | Range">
-  <meta property="og:description" content="Pay a Range invoice or book a caregiver community session, securely via Stripe.">
+  <meta property="og:description" content="Pay a Range consulting invoice or contribute to the Caregiving Community Cohort, securely via Stripe.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://rangeassociates.com/payments">
 
@@ -51,77 +51,54 @@
       <div class="container container--narrow">
         <span class="section-label">Payments</span>
         <h1 class="page-hero__title">Make a payment</h1>
-        <p class="page-hero__description">Settle an invoice or book a caregiver community session. All payments are processed securely by Stripe &mdash; Range never receives or stores your card details.</p>
+        <p class="page-hero__description">Settle a consulting invoice or contribute to the Caregiving Community Cohort. All payments are processed securely by Stripe &mdash; Range never receives or stores your card details.</p>
       </div>
     </section>
 
-    <!-- Pay an Invoice -->
-    <section class="pay-section" id="invoice">
+    <!-- Payment Options -->
+    <section class="pay-section" id="options">
       <div class="container container--narrow">
         <div class="pay-section__header">
-          <span class="section-label">Option One</span>
-          <h2 class="pay-section__title">Pay an invoice</h2>
-          <p class="pay-section__subtitle">Consulting and coaching engagements are priced per proposal, so we invoice you directly. Pay from the button in your invoice email, or use the link below &mdash; you&rsquo;ll enter your invoice number and the amount on the secure payment page.</p>
+          <h2 class="pay-section__title">Choose an option</h2>
+          <p class="pay-section__subtitle">Both options use the same secure Stripe page. You&rsquo;ll enter the amount and a reference (your invoice number, or your name for the cohort) at checkout.</p>
         </div>
 
-        <div class="pay-offering">
-          <div class="pay-offering__head">
-            <div>
-              <h3 class="pay-offering__title">Professional Services</h3>
-              <p class="pay-offering__meta">Amount per your invoice</p>
+        <div class="pay-grid">
+          <div class="pay-offering" id="invoice">
+            <div class="pay-offering__head">
+              <div>
+                <span class="section-label">Option One</span>
+                <h3 class="pay-offering__title">Consulting</h3>
+                <p class="pay-offering__meta">Amount per your invoice</p>
+              </div>
             </div>
-          </div>
-          <button class="btn-pay btn-pay--full" type="button" data-link-key="invoice">
-            <span class="btn-pay__label">Continue to secure payment</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </button>
-          <p class="pay-note" data-note-for="invoice">Pay by card or bank transfer. Bank transfer costs us less, so we prefer it for larger invoices.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Caregiver Community Sessions -->
-    <section class="pay-section pay-section--alt" id="sessions">
-      <div class="container container--narrow">
-        <div class="pay-section__header">
-          <span class="section-label">Option Two</span>
-          <h2 class="pay-section__title">Caregiver community sessions</h2>
-          <p class="pay-section__subtitle">Facilitated group sessions supporting caregivers, led by Amy Pouba. Each session seats twelve; book the date you&rsquo;d like to attend.</p>
-        </div>
-
-        <div class="pay-offering">
-          <div class="pay-offering__head">
-            <div>
-              <h3 class="pay-offering__title">Caregiver Community Session</h3>
-              <p class="pay-offering__meta">12 seats per session</p>
-            </div>
-            <p class="pay-offering__price">$110<span class="pay-offering__period">/session</span></p>
+            <p class="pay-offering__description">Consulting and coaching engagements are priced per proposal, so we invoice you directly. Pay from the button in your invoice email, or continue below and enter your invoice number on the secure payment page.</p>
+            <button class="btn-pay btn-pay--full" type="button" data-link-key="invoice">
+              <span class="btn-pay__label">Continue to secure payment</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+            <p class="pay-note" data-note-for="invoice">Pay by card or bank transfer. Bank transfer costs us less, so we prefer it for larger invoices.</p>
           </div>
 
-          <ul class="pay-sessions">
-            <li class="pay-session">
-              <div class="pay-session__when">
-                <p class="pay-session__date">Tuesday, November 10, 2026</p>
-                <p class="pay-session__time">7:00pm CT</p>
+          <div class="pay-offering" id="cohort">
+            <div class="pay-offering__head">
+              <div>
+                <span class="section-label">Option Two</span>
+                <h3 class="pay-offering__title">Caregiving Community Cohort</h3>
+                <p class="pay-offering__meta">Pay what you will</p>
               </div>
-              <button class="btn-pay btn-pay--compact" type="button" data-link-key="session20261110">
-                <span class="btn-pay__label">Book</span>
-              </button>
-            </li>
-            <li class="pay-session">
-              <div class="pay-session__when">
-                <p class="pay-session__date">Tuesday, December 8, 2026</p>
-                <p class="pay-session__time">7:00pm CT</p>
-              </div>
-              <button class="btn-pay btn-pay--compact" type="button" data-link-key="session20261208">
-                <span class="btn-pay__label">Book</span>
-              </button>
-            </li>
-          </ul>
-
-          <p class="pay-note">One seat per booking, and you&rsquo;ll be asked for the participant name at checkout. When a session fills, its booking page closes automatically.</p>
+            </div>
+            <p class="pay-offering__description">Facilitated group sessions supporting caregivers, led by Amy Pouba. Contribute whatever amount works for you &mdash; enter it on the secure payment page, along with your name as the reference.</p>
+            <button class="btn-pay btn-pay--full" type="button" data-link-key="cohort">
+              <span class="btn-pay__label">Continue to secure payment</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+            <p class="pay-note" data-note-for="cohort">Pay by card or bank transfer. Questions about the cohort? Email <a href="mailto:hello@rangeassociates.com">hello@rangeassociates.com</a>.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -171,37 +148,35 @@
        to Stripe's hosted checkout via Payment Links. No API key is needed
        here, and no secret key must EVER live in this repo -- it is public.
 
-       Both links below are LIVE and take real money. Stripe collects the
-       amount, the invoice number, and the participant details on its own
-       page, so nothing sensitive is gathered on rangeassociates.com.
+       The link below is LIVE and takes real money. Stripe collects the
+       amount and a reference on its own page, so nothing sensitive is
+       gathered on rangeassociates.com.
 
-         invoice          -> Professional Services Contract, customer enters
-                             the amount; required "Invoice number" field.
-                             Card + ACH bank debit (ACH is 0.8% capped at $5
-                             vs 2.9% + 30c, so it matters on large invoices).
-         session<YYYYMMDD> -> one link per session date, $110, one seat per
-                             checkout, capped at 12 via
-                             restrictions[completed_sessions][limit] so Stripe
-                             closes the page when the session fills. Create
-                             more with scripts/create-session-link.sh.
+         invoice -> Professional Services Contract, customer enters the
+                    amount; required "Invoice number" field. Card + ACH bank
+                    debit (ACH is 0.8% capped at $5 vs 2.9% + 30c, so it
+                    matters on large invoices).
+         cohort  -> Caregiving Community Cohort is pay-what-you-will and uses
+                    the SAME link; participants enter their name as the
+                    reference instead of an invoice number.
 
-       Both redirect to /payments/thank-you/ after payment.
+       It redirects to /payments/thank-you/ after payment.
 
        If a key is left empty, its button falls back to an email link rather
        than sending the visitor nowhere.
        ====================================================================== */
+    const INVOICE_LINK = 'https://buy.stripe.com/7sYaEXgHmelU8jg5VugEg01';
+
     const PAYMENT_LINKS = {
-      invoice:           'https://buy.stripe.com/7sYaEXgHmelU8jg5VugEg01',
-      session20261110:   'https://buy.stripe.com/fZu9ATbn2fpY0QOabKgEg02',
-      session20261208:   'https://buy.stripe.com/6oU9AT2Qw3Hg4306ZygEg03'
+      invoice: INVOICE_LINK,
+      cohort:  INVOICE_LINK
     };
 
     const CONTACT_EMAIL = 'hello@rangeassociates.com';
 
     const FALLBACK_SUBJECTS = {
-      invoice:         'Invoice payment',
-      session20261110: 'Caregiver session - November 10',
-      session20261208: 'Caregiver session - December 8'
+      invoice: 'Invoice payment',
+      cohort:  'Caregiving Community Cohort'
     };
 
     const isConfigured = (key) => Boolean(PAYMENT_LINKS[key]);
