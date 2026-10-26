@@ -152,13 +152,18 @@
        amount and a reference on its own page, so nothing sensitive is
        gathered on rangeassociates.com.
 
-         invoice -> Professional Services Contract, customer enters the
-                    amount; required "Invoice number" field. Card + ACH bank
-                    debit (ACH is 0.8% capped at $5 vs 2.9% + 30c, so it
-                    matters on large invoices).
+         invoice -> "Range Payment" product (prod_VAaJpgogsj1KXP), link
+                    plink_1UAKH6GIeQDVGKRcOHLoR8PX. Customer enters the
+                    amount; required "Invoice number or your name" field.
+                    Card + ACH bank debit (ACH is 0.8% capped at $5 vs
+                    2.9% + 30c, so it matters on large invoices).
          cohort  -> Caregiving Community Cohort is pay-what-you-will and uses
-                    the SAME link; participants enter their name as the
-                    reference instead of an invoice number.
+                    the SAME link; participants enter their name in the
+                    reference field instead of an invoice number.
+
+       The link was created via the API, so Stripe's dashboard won't edit
+       it. Change it with the CLI, e.g.
+         stripe payment_links update plink_1UAKH6GIeQDVGKRcOHLoR8PX --live -d ...
 
        It redirects to /payments/thank-you/ after payment.
 
