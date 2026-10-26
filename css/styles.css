@@ -994,7 +994,46 @@ section {
   margin: var(--space-sm) 0 0;
 }
 
-/* Single offering panel (caregiver sessions) */
+/* Side-by-side offering cards */
+.pay-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-lg);
+  align-items: stretch;
+}
+
+@media (max-width: 768px) {
+  .pay-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pay-grid .pay-offering {
+  display: flex;
+  flex-direction: column;
+}
+
+.pay-grid .pay-offering__description {
+  flex: 1 1 auto;
+}
+
+.pay-offering__description {
+  font-size: 0.9375rem;
+  color: var(--slate);
+  margin-bottom: var(--space-lg);
+}
+
+.pay-note a {
+  color: var(--forest);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.pay-note a:hover {
+  color: var(--pine);
+}
+
+/* Offering panel */
 .pay-offering {
   background: white;
   border: 1px solid var(--mist);
@@ -1024,6 +1063,10 @@ section {
     flex-direction: column;
     gap: var(--space-xs);
   }
+}
+
+.pay-offering__head .section-label {
+  margin-bottom: var(--space-xs);
 }
 
 .pay-offering__title {
@@ -1153,49 +1196,4 @@ section {
 
 .footer__link:hover {
   color: var(--mist);
-}
-
-/* Dated session list */
-.pay-sessions {
-  list-style: none;
-  margin: 0 0 var(--space-md);
-}
-
-.pay-session {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-md);
-  padding: var(--space-md) 0;
-  border-bottom: 1px solid var(--mist);
-}
-
-.pay-session:last-child {
-  border-bottom: 0;
-}
-
-@media (max-width: 560px) {
-  .pay-session {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--space-sm);
-  }
-}
-
-.pay-session__date {
-  font-weight: 600;
-  color: var(--forest);
-  margin-bottom: 0;
-}
-
-.pay-session__time {
-  font-family: var(--font-mono);
-  font-size: 0.8125rem;
-  color: var(--stone);
-}
-
-.btn-pay--compact {
-  flex-shrink: 0;
-  padding: 0.625rem 1.75rem;
-  font-size: 0.9375rem;
 }
